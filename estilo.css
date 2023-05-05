@@ -1,3 +1,40 @@
 body {
-  background: #CCC;
+  background: #344960;
+}
+
+.book-card {
+  margin: 30px;
+  background-color: #bb9b8b;
+  border: 5px solid #bb9b8b;
+  display:inline-block;
+  overflow: hidden;
+  height: 375px;
+  width: 250px;
+  border-radius: 10px;
+
+}
+
+.book-card-h4{
+  padding: 5px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;    
+  text-overflow: ellipsis;
+}
+
+.book-card-img{
+  height: 154px;
+  width: 107px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-card-p {
+  padding: 5px;
+  margin: 0;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;    
+  text-overflow: ellipsis;
 }
