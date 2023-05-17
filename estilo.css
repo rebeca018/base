@@ -1,11 +1,25 @@
 body {
-  background: #344960;
+  background: #CCC;
 }
+
+
 
 .book-card {
   margin: 30px;
-  background-color: #bb9b8b;
-  border: 5px solid #bb9b8b;
+  background-color: #868096;
+  border: 5px solid #868096;
+  display:inline-block;
+  overflow: hidden;
+  height: 175px;
+  width: 250px;
+  border-radius: 10px;
+
+}
+
+.book-card-d {
+  margin: 30px;
+  background-color: #868096;
+  border: 5px solid #868096;
   display:inline-block;
   overflow: hidden;
   height: 375px;
@@ -13,6 +27,7 @@ body {
   border-radius: 10px;
 
 }
+
 
 .book-card-h4{
   padding: 5px;

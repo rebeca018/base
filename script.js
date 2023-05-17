@@ -27,7 +27,7 @@ class ProdutoDestaque extends Produto{
     }
     mostrar_produto_destaque(){
         return `
-            <div class="book-card">
+            <div class="book-card-d">
             <img src="${this.imagem_produtoD}" class="book-card-img">
             <div class="book-card-h4">${this.nome}</div>
             <div class="book-card-p">${this.data_cadastro}</div>
@@ -41,29 +41,38 @@ class ProdutoDestaque extends Produto{
     }
 }
 
-const produto = new ProdutoDestaque("Estilhaça-me", "19/04/2023", "Livro", 23.99, "https://m.media-amazon.com/images/I/41VestZBywL._SX339_BO1,204,203,200_.jpg" );
+const produto = new ProdutoDestaque("Estilhaça-me", "19/04/2023", "Livro Físico", 23.99, "https://m.media-amazon.com/images/I/41VestZBywL._SX339_BO1,204,203,200_.jpg" );
 console.log(produto.mostrar_produto_destaque());
 const div = document.getElementById('produto-destaque');
 div.insertAdjacentHTML('afterbegin', produto.mostrar_produto_destaque());
 
 
-const produto2 = new ProdutoDestaque("Legend", "03/05/2023", "Livro", 18.05, "https://m.media-amazon.com/images/I/A13bJYSllML._AC_UL480_FMwebp_QL65_.jpg");
-console.log(produto2.mostrar_produto_destaque());
-const div2 = document.getElementById('produto-destaque');
-div2.insertAdjacentHTML('afterbegin', produto2.mostrar_produto_destaque());
+const produto2 = new Produto("Legend", "03/05/2023", "E-book", 18.05);
+console.log(produto2.mostrar_produto());
+const div2 = document.getElementById('lista-produtos');
+div2.insertAdjacentHTML('afterbegin', produto2.mostrar_produto());
 
 
-const produto3 = new ProdutoDestaque("Six of Crows", "03/05/2023", "Livro", 29.99, "https://m.media-amazon.com/images/I/51ku0tEgIcL._SY346_.jpg");
+const produto3 = new ProdutoDestaque("Six of Crows", "03/05/2023", "Livro Físico", 29.99, "https://m.media-amazon.com/images/I/51ku0tEgIcL._SY346_.jpg");
 console.log(produto3.mostrar_produto_destaque());
 const div3 = document.getElementById('produto-destaque');
 div3.insertAdjacentHTML('afterbegin', produto3.mostrar_produto_destaque());
 
 
-const produto4 = new ProdutoDestaque("Jogos de Herança", "03/05/2023", "Livro", 37.92, "https://m.media-amazon.com/images/I/81e98vyHFmS._AC_UL480_FMwebp_QL65_.jpg");
-console.log(produto4.mostrar_produto_destaque());
-const div4 = document.getElementById('produto-destaque');
-div4.insertAdjacentHTML('afterbegin', produto4.mostrar_produto_destaque());
+const produto4 = new Produto("Jogos de Herança", "03/05/2023", "E-book", 37.92);
+console.log(produto4.mostrar_produto());
+const div4 = document.getElementById('lista-produtos');
+div4.insertAdjacentHTML('afterbegin', produto4.mostrar_produto());
 
+const produto5 = new Produto("Um tom mais escuro de magia", "17/05/2023", "Livro Físico", 38.99);
+console.log(produto5.mostrar_produto());
+const div5 = document.getElementById('lista-produtos');
+div4.insertAdjacentHTML('afterbegin', produto5.mostrar_produto());
+
+const produto6 = new Produto("A seleção", "17/05/2023", "E-book", 34.90);
+console.log(produto6.mostrar_produto());
+const div6 = document.getElementById('lista-produtos');
+div4.insertAdjacentHTML('afterbegin', produto6.mostrar_produto());
 
 
 // Estrutura inicial:
