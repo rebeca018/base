@@ -73,14 +73,3 @@ const produto6 = new Produto("A seleção", "17/05/2023", "E-book", 34.90);
 console.log(produto6.mostrar_produto());
 const div6 = document.getElementById('lista-produtos');
 div4.insertAdjacentHTML('afterbegin', produto6.mostrar_produto());
-
-
-// Estrutura inicial:
-// <div id="one">one</div>
-/*
-var p1 = document.getElementById('one');
-p1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
-*/
-// Neste ponto, a nova estrutura é:
-// <div id="one">one</div>
-// <div id="two">two</div>
