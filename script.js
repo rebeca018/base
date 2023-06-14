@@ -1,5 +1,13 @@
 // divListaProduto.insertAdjacentHTML('afterbegin', '');
 
+class ErroProduto extends Error {
+    constructor(message){
+        super(message);
+        this.name = "Erro Produto";         
+    }
+}
+
+
 class Produto{
     constructor(nome, data_cadastro, descricao, preco){
         this.nome = nome;
@@ -7,7 +15,17 @@ class Produto{
         this.descricao = descricao;
         this.preco = preco;
     }
+
+    mostrarAtributos(){
+        try{
+            return this.mostrar_produto();
+        }catch (erro){
+            console.log(erro.stack)
+        }
+    }
+
     mostrar_produto(){
+        if (this.nome != "" && this.data_cadastro != "" && this.descricao != "" && this.preco != ""){
         return `
             <div class="book-card">
             <div class="book-card-h4">${this.nome}</div>
@@ -16,6 +34,9 @@ class Produto{
             <div class="book-card-p">${this.preco}</div>
             </div>
         `;
+        }else{
+            throw new ErroProduto("Os dados do produto não estão preenchidos")
+        }
         //return this.nome +  this.data_cadastro + this.descricao + this.preco;
     }
 }
@@ -25,7 +46,10 @@ class ProdutoDestaque extends Produto{
         super(nome, data_cadastro, descricao, preco);
         this.imagem_produtoD = imagem_produtoD;
     }
+
+
     mostrar_produto_destaque(){
+        if (this.imagem_produtoD != "" && this.nome != "" && this.data_cadastro != "" && this.descricao != "" && this.preco != ""){
         return `
             <div class="book-card-d">
             <img src="${this.imagem_produtoD}" class="book-card-img">
@@ -36,12 +60,14 @@ class ProdutoDestaque extends Produto{
             </div>
 
         `;
-        
+        }else{
+            throw new ErroProduto("Os dados do produto destaque não estão preenchidos")
+        }
         //return this.nome +  this.data_cadastro + this.descricao + this.preco + this.imagem_produtoD;
     }
 }
 
-const produto = new ProdutoDestaque("Estilhaça-me", "19/04/2023", "Livro Físico", 23.99, "https://m.media-amazon.com/images/I/41VestZBywL._SX339_BO1,204,203,200_.jpg" );
+const produto = new ProdutoDestaque("Estilhaça-me", "19/04/2023", "", 23.99, "https://m.media-amazon.com/images/I/41VestZBywL._SX339_BO1,204,203,200_.jpg" );
 console.log(produto.mostrar_produto_destaque());
 const div = document.getElementById('produto-destaque');
 div.insertAdjacentHTML('afterbegin', produto.mostrar_produto_destaque());
