@@ -73,13 +73,13 @@ const div = document.getElementById('produto-destaque');
 div.insertAdjacentHTML('afterbegin', produto.mostrar_produto_destaque());
 
 
-const produto2 = new Produto("", "03/05/2023", "E-book", 18.05);
+const produto2 = new Produto("Legend", "03/05/2023", "E-book", 18.05);
 console.log(produto2.mostrar_produto());
 const div2 = document.getElementById('lista-produtos');
 div2.insertAdjacentHTML('afterbegin', produto2.mostrar_produto());
 
 
-const produto3 = new ProdutoDestaque("Six of Crows", "03/05/2023", "Livro Físico", 29.99, "https://m.media-amazon.com/images/I/51ku0tEgIcL._SY346_.jpg");
+const produto3 = new ProdutoDestaque("Six of Crows", "03/05/2023", "", 29.99, "https://m.media-amazon.com/images/I/51ku0tEgIcL._SY346_.jpg");
 console.log(produto3.mostrar_produto_destaque());
 const div3 = document.getElementById('produto-destaque');
 div3.insertAdjacentHTML('afterbegin', produto3.mostrar_produto_destaque());
