@@ -67,13 +67,13 @@ class ProdutoDestaque extends Produto{
     }
 }
 
-const produto = new ProdutoDestaque("Estilhaça-me", "19/04/2023", "", 23.99, "https://m.media-amazon.com/images/I/41VestZBywL._SX339_BO1,204,203,200_.jpg" );
+const produto = new ProdutoDestaque("Estilhaça-me", "19/04/2023", "Livro ", 23.99, "https://m.media-amazon.com/images/I/41VestZBywL._SX339_BO1,204,203,200_.jpg" );
 console.log(produto.mostrar_produto_destaque());
 const div = document.getElementById('produto-destaque');
 div.insertAdjacentHTML('afterbegin', produto.mostrar_produto_destaque());
 
 
-const produto2 = new Produto("Legend", "03/05/2023", "E-book", 18.05);
+const produto2 = new Produto("", "03/05/2023", "E-book", 18.05);
 console.log(produto2.mostrar_produto());
 const div2 = document.getElementById('lista-produtos');
 div2.insertAdjacentHTML('afterbegin', produto2.mostrar_produto());
